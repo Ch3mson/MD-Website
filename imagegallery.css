@@ -1,0 +1,258 @@
+/*Navigation Bar + Logo */
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+body {
+	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+    background-color: #151320;
+    height: 100vh;
+    display: grid;
+}
+
+.container1 {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(to right, #fb5283, #ff3527);
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+    list-style-type: none;
+    float: left;
+    padding: 8px ;
+    margin: 0;
+    color: #444;
+    font-size: 25px; 
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/* navigation bar ends here /*
+
+/* Home page starts here */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+.row {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    animation: fadeIn 1.5s;
+}
+
+
+.col-1 {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    margin-top: -40;
+}
+
+.col-1 h2 {
+    font-size: 54px;
+    color: ghostwhite;
+}
+
+.col-1 h3 {
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    padding-top: 30px;
+    padding-right: 100px;
+    padding-left: 100px;
+    grid-gap: 40px;
+    
+    animation: fadeIn 2s;
+}
+
+.card {
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+.container {
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+    transition: .3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
+
+.C1 {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.C2 {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.C3 {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.C4 {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.C5 {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.C6 {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.container:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+.details {
+    padding: 20px 10px;
+}
+.details>h3 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+.details>p {
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.card1>.container:after {
+    background-image: linear-gradient(135deg,#fb5283, #ff3527);
+    opacity: 20%;    
+}
+
+.card2>.container:after {
+    background-image: linear-gradient(135deg,#fb5283, #ff3527);
+    opacity: 20%;
+}
+
+.card3>.container:after {
+    background-image: linear-gradient(135deg,#fb5283, #ff3527);
+    opacity: 20%;
+}
+
+.end-col h2 {
+    font-size: 20px;
+    color: ghostwhite;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.social-links img {
+    height: 13px;
+    margin: 20px;
+    margin-top: 100px;
+    cursor: pointer; 
+}
+
+.social-links {
+    text-align: center;
+}

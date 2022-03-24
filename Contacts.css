@@ -1,0 +1,279 @@
+/*Navigation Bar + Logo */
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+body {
+	margin: 0;
+	background: #151320;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+.container1 {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+    background: linear-gradient(to right, #fb5283, #ff3527);
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+    list-style-type: none;
+    float: left;
+    padding: 8px ;
+    margin: 0;
+    color: #444;
+    font-size: 25px; 
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/* navigation bar ends here */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+.row {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    animation: fadeIn 1.5s;
+}
+
+.col-1 {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    margin-top: -40;
+}
+
+.col-1 h2 {
+    font-size: 54px;
+    color: ghostwhite;
+    margin-bottom: -5px;
+}
+
+.col-1 h3 {
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+
+/* cards start here */
+
+.container {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+.container .card {
+    position: relative;
+}
+
+.container .card .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.7s;
+    z-index: 1;
+    
+    animation: fadeIn 2s;
+}
+
+.icon {
+    cursor: pointer; 
+}
+
+.container .card:nth-child(1) .icon {
+    background-image: linear-gradient(135deg,#fb5283, #ff3527);
+    
+}
+
+.container .card:nth-child(2) .icon {
+    background-image: linear-gradient(225deg,#fb5283, #ff3527);
+}
+
+.container .card:nth-child(3) .icon {
+    background-image: linear-gradient(315deg,#fb5283, #ff3527);
+}
+
+
+.container .card .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+    
+    animation: fadeIn 2s;
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+    max-height: 30px;
+}
+
+.container .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    background: #151320;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1 {
+    background: #ff0057;
+    transform: translateY(0px);
+}
+
+.container .card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.container .card .face.face1 .content i {
+    max-width: 100px;
+}
+
+.container .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    transform: translateY(-100px);
+    border-radius: 0 0 20px 20px;
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #414141;
+}
+
+.container .card .face.face2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    color: #414141;
+} 
+
+.container a {
+    text-decoration: none;
+    color: #414141;
+}
+
+/* bottom text */
+
+.end-col h2 {
+    font-size: 20px;
+    color: ghostwhite;
+    text-align: center;
+    margin-top: 100px;
+    
+    animation: fadeIn 2s;
+}
+
+.end-col a {
+    color: ghostwhite;
+
+}
