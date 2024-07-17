@@ -1,1 +1,1 @@
-HTML and CSS website for building a website assignment.
+HTML CSS website i made in gr 10
